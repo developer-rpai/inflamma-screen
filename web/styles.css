@@ -1,0 +1,169 @@
+:root {
+  --bg: #faf9f7;
+  --card: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --accent: #0f766e;
+  --accent-dark: #0b5d57;
+  --line: #e5e7eb;
+  --low: #15803d;
+  --moderate: #b45309;
+  --elevated: #b91c1c;
+  --focus: #2563eb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.site-header {
+  background: var(--accent-dark);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.site-header h1 { margin: 0; font-size: 1.9rem; letter-spacing: 0.02em; }
+.tagline { margin: 0.4rem 0 0; opacity: 0.92; }
+
+.disclaimer-banner {
+  background: #fef3c7;
+  border-bottom: 2px solid #f59e0b;
+  padding: 0.9rem 1.25rem;
+  max-width: 56rem;
+  margin: 1.25rem auto 0;
+  border-radius: 0.5rem;
+}
+
+main { max-width: 56rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+h2.step-title { margin-top: 0; }
+
+.condition-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  margin-top: 1rem;
+}
+
+.condition-card {
+  border: 2px solid var(--line);
+  border-radius: 0.6rem;
+  padding: 1rem;
+  background: var(--card);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+
+.condition-card:hover { border-color: var(--accent); }
+
+.condition-card h3 { margin: 0 0 0.4rem; }
+.condition-card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+.progress {
+  height: 0.5rem;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+.progress > div { height: 100%; background: var(--accent); transition: width 0.2s; }
+
+fieldset { border: none; padding: 0; margin: 0; }
+legend.question-text { font-size: 1.15rem; font-weight: 600; padding: 0; margin-bottom: 1rem; }
+
+.answer-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.answer-option:hover { border-color: var(--accent); }
+.answer-option input { width: 1.1rem; height: 1.1rem; accent-color: var(--accent); }
+
+.button-row { display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap; }
+
+button.btn {
+  font: inherit;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--accent);
+  cursor: pointer;
+}
+button.btn-primary { background: var(--accent); color: #fff; }
+button.btn-primary:hover { background: var(--accent-dark); }
+button.btn-secondary { background: #fff; color: var(--accent-dark); }
+button.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+.band-badge {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.band-low { background: var(--low); }
+.band-moderate { background: var(--moderate); }
+.band-elevated { background: var(--elevated); }
+
+.score-bar {
+  height: 0.75rem;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0.75rem 0;
+}
+.score-bar > div { height: 100%; background: var(--accent); }
+
+.result-disclaimer {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 0.9rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-top: 1.25rem;
+}
+
+.endorsed-list { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+
+.site-footer {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+  color: var(--muted);
+}
+.site-footer ul { padding-left: 1.25rem; }
+.site-footer a { color: var(--accent-dark); }
+.footer-note { font-size: 0.9rem; }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

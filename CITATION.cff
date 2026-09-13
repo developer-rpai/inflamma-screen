@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "inflamma-screen: an educational screening toolkit for chronic inflammatory skin conditions"
+authors:
+  - family-names: Pai
+    given-names: Mitra
+version: 0.1.0
+date-released: 2026-09-12
+license: Apache-2.0
+repository-code: "https://github.com/developer-rpai/inflamma-screen"
+abstract: "An open-source, educational, non-diagnostic symptom-screening toolkit for chronic inflammatory skin conditions (hidradenitis suppurativa, psoriasis, atopic dermatitis), with a Python engine, terminal screener, and static web demo."
+keywords:
+  - dermatology
+  - patient-education
+  - screening
+  - inflammatory-skin-conditions
